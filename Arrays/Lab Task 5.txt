@@ -1,0 +1,35 @@
+package dsalab4q5;
+
+import java.util.*;
+public class DSALab4Q5 {
+    public static int[] mergeRemove(int[] arr1, int[] arr2) {
+        int[] mergedArr = new int[arr1.length + arr2.length];
+        System.arraycopy(arr1, 0, mergedArr, 0, arr1.length);
+        System.arraycopy(arr2, 0, mergedArr, arr1.length, arr2.length);
+
+        Set<Integer> uniqueElements = new TreeSet<>();
+        for (int num : mergedArr) {
+            uniqueElements.add(num);
+        }
+
+        int[] result = new int[uniqueElements.size()];
+        int index = 0;
+        for (int num : uniqueElements) {
+            result[index++] = num;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {11, 20, 37, 50};
+        int[] arr2 = {50, 31, 78, 82};
+
+        int[] merge = mergeRemove(arr1, arr2);
+
+        System.out.print("Merged array without duplicates items: ");
+        for (int num : merge) {
+            System.out.print(num + " ");
+        }
+    }
+}

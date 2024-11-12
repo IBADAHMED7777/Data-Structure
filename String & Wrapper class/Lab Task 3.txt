@@ -1,0 +1,19 @@
+package dsalab1q3;
+public class DSALab103 {
+    public static void main(String[] args) {
+        String str1 = "Float Like a ";
+        String str2 = "Cadillac ";
+        String str3 = "sting like a ";
+        String str4 = "Beemer ";
+        String str5 = ":)";
+
+        String concate = str1 + str2 + str3 + str4 + str5;
+        System.out.println(concate);
+
+        str4 = str4.toUpperCase();
+        System.out.println("String 4 (to the Upper Case): " + str4);
+
+        String substring = concate.substring(8);
+        System.out.println("Substring from 8th character onwards: " + substring);
+    }
+}

@@ -1,0 +1,18 @@
+package dsalab3q3;
+
+import java.util.*;
+public class DSALab3Q3 {
+    public static void main(String[] args) {
+        Scanner p = new Scanner(System.in);
+        System.out.print("Ingrese una cadena: ");
+        String str = p.nextLine();
+
+        String revs = new StringBuilder(str).reverse().toString();
+
+        if (str.equalsIgnoreCase(revs)) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}

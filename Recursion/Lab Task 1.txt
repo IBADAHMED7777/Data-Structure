@@ -1,0 +1,23 @@
+package dsalab3q1;
+
+import java.util.*;
+public class DSALab3Q1 {
+    public static void main(String[] args) {
+        Scanner j = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int k = j.nextInt();
+
+        printInt(k);
+    }
+
+    public static int printInt(int k) {
+        if (k < 0) {
+            return 0;
+        }
+
+        System.out.println(k + " ");
+        printInt(k - 1);
+
+        return 0;
+    }
+}

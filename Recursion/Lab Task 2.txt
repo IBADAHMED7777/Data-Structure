@@ -1,0 +1,19 @@
+package dsalab3q2;
+
+import java.util.*;
+public class DSALab3Q2 {
+    public static void main(String[] args) {
+        String name = "Ibad Ahmed Siddiqui";
+        System.out.println("name: " + name);
+
+        String rename = RE(name);
+        System.out.println("Reverse name: " + rename);
+    }
+
+    public static String RE(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
+        return RE(str.substring(1)) + str.charAt(0);
+    }
+}

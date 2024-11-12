@@ -1,0 +1,28 @@
+package dsalab2q2;
+
+import java.util.*;
+
+public class DSALab2Q2 {
+    public static void main(String[] args) {
+        Scanner f = new Scanner(System.in);
+        ArrayList<String> movies = new ArrayList<>();
+
+        movies.add("Epic");
+        movies.add("Up");
+        movies.add("Frozen");
+        movies.add("Planes");
+        movies.add("Cars");
+
+        System.out.println("Press 1 for all elements\nPress 2 for largest String\nEnter a number: ");
+        int a = f.nextInt();
+
+        if (a == 1) {
+            System.out.println(movies);
+        } else if (a == 2) {
+            String larg = movies.stream()
+                                .max(Comparator.comparing(String::length))
+                                .orElse(null);
+            System.out.println("largest String= " + larg);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+package labtask02;
+public class Labtask02 {
+    public static void main(String[] args) {
+        double a = 234.65;
+        Double A = Double.valueOf(a);
+        System.out.println("Wrapper Double: " + A);
+    }
+}

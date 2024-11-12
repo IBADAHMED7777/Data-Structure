@@ -1,0 +1,20 @@
+package dsalab2q1;
+import java.util.*;
+public class DSALab2Q1 {
+    public static void main(String[] args) {
+        Vector<Integer> v = new Vector<>();
+
+        for (int i = 1; i <= 10; i++) {
+            v.add(i);
+        }
+
+        System.out.println("vector=" + v);
+
+        int sum = 0;
+        for (int num : v) {
+            sum += num;
+        }
+
+        System.out.println("sum=" + sum);
+    }
+}

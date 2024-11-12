@@ -1,0 +1,32 @@
+
+package employee1;
+import java.util.*;
+public class Employee1 {
+    private String name;
+    private int id;
+    public Employee1(){
+        
+    }
+    public Employee1(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+    public int hashCode() {
+        return Objects.hash(name, id);
+    }
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Employee1 employee = (Employee1) obj;
+        return id == employee.id && Objects.equals(name, employee.name);
+    }
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }}

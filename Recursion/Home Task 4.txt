@@ -1,0 +1,23 @@
+
+package dsalab3q4;
+import java.util.*;
+public class DSALab3Q4 {
+    public static int GCDcal(int no1, int no2) {
+        if (no2 == 0) {
+            return no1;
+        } else {
+            return GCDcal(no2, no1 % no2);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner l = new Scanner(System.in);
+        System.out.print("Ingrese el primer numero: ");
+        int n1 = l.nextInt();
+        System.out.print("Ingrese el segundo numero: ");
+        int n2 = l.nextInt();
+
+        int result = GCDcal(n1, n2);
+        System.out.println("The GCD of " + n1 + " and " + n2 + " is: " + result);
+    }
+}

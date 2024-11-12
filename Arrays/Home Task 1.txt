@@ -1,0 +1,17 @@
+package dsalab4q1;
+
+public class DSALab4Q1 {
+    public static void main(String[] args) {
+        double[] no = {11.8, 19.7, 24.3, 31.9, 90.0, 65.7, 89.8};
+
+        double sum = 0.0;
+        for (double n : no) {
+            sum += n;
+        }
+
+        double mean = sum / no.length;
+
+        System.out.println("Suma de elementos: " + sum);
+        System.out.println("Media de elementos: " + mean);
+    }
+}

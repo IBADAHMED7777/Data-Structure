@@ -1,0 +1,22 @@
+package dsalab2q4;
+import java.util.*;
+public class DSALab2Q4 {
+    public static void main(String[] args) {
+        Vector<Integer> v = new Vector<>();
+
+        for (int i = 1; i <= 10; i++) {
+            v.add(i);
+        }
+
+        System.out.println(v);
+
+        int sum = 0;
+        for (int num : v) {
+            sum += num;
+        }
+        System.out.println("The sum of 10 numbers is: " + sum);
+
+        int max = Collections.max(v);
+        System.out.println("The maximum element in the vector is: " + max);
+    }
+}

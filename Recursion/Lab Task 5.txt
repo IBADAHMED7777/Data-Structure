@@ -1,0 +1,21 @@
+package dsalab3q5;
+
+import java.util.*;
+public class DSALab3Q5 {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        System.out.print("Ingrese un numero entero: ");
+        int no = a.nextInt();
+
+        int fact = Fact(no);
+        System.out.println("The factorial of " + no + " is: " + fact);
+    }
+
+    public static int Fact(int no) {
+        if (no == 1) {
+            return 1;
+        } else {
+            return no * Fact(no - 1);
+        }
+    }
+}

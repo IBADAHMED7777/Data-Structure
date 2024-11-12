@@ -1,0 +1,29 @@
+package dsalab3q1;
+
+import java.util.*;
+public class DSALab3Q1 {
+    public static Map<Integer, Long> memo = new HashMap<>();
+
+    public static long calFibonacci(int no) {
+        if (no <= 1) {
+            return no;
+        }
+
+        if (memo.containsKey(no)) {
+            return memo.get(no);
+        }
+
+        long result = calFibonacci(no - 1) + calFibonacci(no - 2);
+        memo.put(no, result);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner v = new Scanner(System.in);
+        System.out.print("Enter the term (N) to find in the Fibonacci series: ");
+        int no = v.nextInt();
+
+        long nthFibonacci = calFibonacci(no);
+        System.out.println("The " + no + "-th term in the Fibonacci series is: " + nthFibonacci);
+    }
+}

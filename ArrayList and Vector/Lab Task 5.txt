@@ -1,0 +1,27 @@
+package dsalab2q5;
+import java.util.*;
+public class DSALab205 {
+    public static int findKthSmallest(ArrayList<Integer> no, int k) {
+        if (k <= 0 || k > no.size()) {
+            throw new IllegalArgumentException("Invalid value of k");
+        }
+
+        return no.get(k - 1);
+    }
+}
+public static void main(String[] args) {
+    ArrayList<Integer> no = new ArrayList<>();
+
+    no.add(22);
+    no.add(41);
+    no.add(66);
+    no.add(89);
+    no.add(117);
+
+    Scanner s = new Scanner(System.in);
+    System.out.print("Enter the value of k: ");
+    int k = s.nextInt();
+
+    int ks = findKthSmallest(no, k);
+    System.out.println("The " + k + "-th smallest element is: " + ks);
+}

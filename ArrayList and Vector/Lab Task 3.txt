@@ -1,0 +1,62 @@
+package employees;
+import java.util.Comparator;
+public class Employees implements Comparable<Employees> {
+    private int empId;
+    private String empName;
+    private String empGender;
+    private int yearOfJoining;
+
+    @Override
+    public int compareTo(Employees other) {
+        // Implement comparison logic here
+    }
+}
+package dsalab2q2;
+
+import java.util.*;
+public class DSALab2Q2 {
+    public static void main(String[] args) {
+        Scanner f = new Scanner(System.in);
+        ArrayList<String> movies = new ArrayList<>();
+
+        movies.add("Epic");
+        movies.add("Up");
+        movies.add("Frozen");
+        movies.add("Planes");
+        movies.add("Cars");
+
+        System.out.println("Press 1 for all elements\nPress 2 for largest String\nEnter a number: ");
+        int a = f.nextInt();
+
+        if (a == 1) {
+            System.out.println(movies);
+        } else if (a == 2) {
+            String larg = movies.stream()
+                                .max(Comparator.comparing(String::length))
+                                .orElse(null);
+            System.out.println("largest String= " + larg);
+        }
+    }
+}
+package employees;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Employees> employees = new ArrayList<>();
+
+        employees.add(new Employees(101, "Ali", "Male", 2017));
+        employees.add(new Employees(102, "Babar", "Male", 2013));
+        employees.add(new Employees(103, "Alizah", "Female", 2019));
+        employees.add(new Employees(104, "Danish", "Male", 2018));
+
+        System.out.println("Employees sorted by Year of Joining (using Comparable): ");
+        Collections.sort(employees);
+        employees.forEach(System.out::println);
+
+        System.out.println("\nEmployees sorted by Name (using Comparator):");
+        employees.sort(Comparator.comparing(Employees::getEmpName));
+        employees.forEach(System.out::println);
+    }
+}

@@ -1,0 +1,25 @@
+package dsalab2q1;
+
+import java.util.*;
+public class DSALab2Q1 {
+    public static void main(String[] args) {
+        Vector<Integer> num = new Vector<>();
+
+        num.add(101);
+        num.add(38);
+        num.add(47);
+        num.add(20);
+        num.add(10);
+
+        System.out.println("Vector=" + num);
+
+        Collections.sort(num);
+        System.out.println("sorted vector=" + num);
+
+        int min = Collections.min(num);
+        System.out.println("minimum value=" + min);
+
+        int max = Collections.max(num);
+        System.out.println("maximum value=" + max);
+    }
+}

@@ -1,0 +1,15 @@
+package dsalab2q2;
+
+import java.util.*;
+public class DSALab2Q2 {
+    public static void main(String[] args) {
+        Scanner d = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = d.nextLine();
+
+        int hashCode = inputString.hashCode();
+
+        System.out.println("Hash code of " + inputString + " is: " + hashCode);
+    }
+}

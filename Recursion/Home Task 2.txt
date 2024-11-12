@@ -1,0 +1,21 @@
+package dsalab3q2;
+
+import java.util.*;
+public class DSALab3Q2 {
+    public static void main(String[] args) {
+        Scanner b = new Scanner(System.in);
+        System.out.print("Ingrese un numero entero: ");
+        int no = b.nextInt();
+
+        int dc = CountDigits(no);
+        System.out.println("The total number of digits in " + no + " are: " + dc);
+    }
+
+    public static int CountDigits(int n) {
+        if (n <= 0) {
+            return 0;
+        } else {
+            return 1 + CountDigits(n / 10);
+        }
+    }
+}

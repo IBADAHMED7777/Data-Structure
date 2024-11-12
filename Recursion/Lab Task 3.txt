@@ -1,0 +1,21 @@
+package dsalab3q3;
+
+import java.util.*;
+public class DSALab3Q3 {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+        System.out.print("Ingrese un numero entero: ");
+        int no = e.nextInt();
+
+        int sum = sumtoAll(no);
+        System.out.println("The sum of integers form 1 to " + no + " is: " + sum);
+    }
+
+    public static int sumtoAll(int no) {
+        if (no == 1) {
+            return 1;
+        } else {
+            return no + sumtoAll(no - 1);
+        }
+    }
+}

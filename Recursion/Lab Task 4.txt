@@ -1,0 +1,18 @@
+
+package dsalab3q4;
+public class DSALab3Q4 {
+    public static void main(String[] args) {
+        int arr[] = {19, 21, 33, 40, 63, 200};
+
+        int sum = sumArr(arr, arr.length - 1);
+        System.out.println("The sum of elements in the array is: " + sum);
+    }
+
+    public static int sumArr(int[] arr, int n) {
+        if (n < 0) {
+            return 0;
+        } else {
+            return arr[n] + sumArr(arr, n - 1);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+package dsalab4q5;
+
+import java.util.*;
+public class DSALab4Q5 {
+    public static void zigzagSort(int[] no) {
+        Arrays.sort(no);
+        int n = no.length;
+
+        for (int i = 0; i < n - 1; i += 2) {
+            if (no[i] > no[i + 1]) {
+                swaping(no, i, i + 1);
+            }
+        }
+    }
+
+    public static void swaping(int[] no1, int i, int j) {
+        int temp = no1[i];
+        no1[i] = no1[j];
+        no1[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {20, 21, 45, 17, 1, 63, 6, 99, 82, 17, 21, 66, 4, 45};
+        zigzagSort(arr);
+
+        System.out.println(Arrays.toString(arr));
+    }
+}

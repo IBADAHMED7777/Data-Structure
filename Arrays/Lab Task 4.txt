@@ -1,0 +1,20 @@
+package dsalab4q4;
+
+public class DSALab4Q4 {
+    public static void main(String[] args) {
+        int arr[] = {34, 89, 101, 120, 78, 55};
+        int o = 0;
+        int e = 0;
+
+        for (int i : arr) {
+            if (i % 2 == 0) {
+                e++;
+            } else {
+                o++;
+            }
+        }
+
+        System.out.println(e + " numbers are even.");
+        System.out.println(o + " numbers are odd.");
+    }
+}

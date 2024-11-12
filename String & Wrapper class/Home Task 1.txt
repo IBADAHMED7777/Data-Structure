@@ -1,0 +1,20 @@
+package dsalab1q1;
+
+public class DSALab101 {
+    public static void main(String[] args) {
+        int no1 = 357;
+        Integer no2 = no1; // Autoboxing
+        System.out.println("Autoboxing int: " + no1);
+
+        Integer no = 111;
+        int no3 = no; // Unboxing
+        System.out.println("Unboxing int: " + no3);
+
+        String number = "289";
+        int parsedInt = Integer.parseInt(number);
+        System.out.println("Parsed String to int using parseInt: " + parsedInt);
+
+        String numToStr = Integer.toString(no3);
+        System.out.println("Converted int to String using toString: " + numToStr);
+    }
+}

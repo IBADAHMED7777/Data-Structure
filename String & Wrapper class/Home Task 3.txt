@@ -1,0 +1,24 @@
+package dsalab1q3;
+import java.util.*;
+
+public class DSALab103 {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        System.out.print("Enter a double number: ");
+
+        double no = a.nextDouble();
+        Double no1 = no;
+
+        double num = no1;
+        Double absvalue = Math.abs(num);
+        System.out.println("Absolute Value: " + absvalue);
+
+        Double sqrt = Math.sqrt(num);
+        System.out.println("Square root: " + sqrt);
+
+        System.out.print("Enter the power: ");
+        double pow = a.nextDouble();
+        Double pow1 = Math.pow(num, pow);
+        System.out.println("power: " + pow1);
+    }
+}

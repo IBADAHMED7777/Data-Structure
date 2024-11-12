@@ -1,0 +1,33 @@
+
+package dsalab4q3;
+import java.util.*;
+public class DSALab4Q3 {
+     public static List<List<Integer>> findComb(int[] numbers, int target) {
+        Arrays.sort(numbers);
+        List<List<Integer>> result = new ArrayList<>();
+        generateComb(numbers, 0, target, new ArrayList<>(), result);
+        return result;
+    }
+    public static void generateComb(int[] numbers, int startIndex, int remainingSum, 
+            List<Integer> currComb, List<List<Integer>> result) {
+        if (remainingSum == 0) {
+            result.add(new ArrayList<>(currComb));
+        } else {
+            for (int i = startIndex; i < numbers.length; i++) {
+                if (i > startIndex && numbers[i] == numbers[i - 1]) {
+                    continue; 
+                }
+                if (numbers[i] > remainingSum) {
+                    break;
+                }
+                currComb.add(numbers[i]);
+                generateComb(numbers, i + 1, remainingSum - numbers[i], currComb, result);
+                currComb.remove(currComb.size() - 1);
+            }}} 
+    public static void main(String[] args) {
+        int[] numbers = {23, 4, 9, 0, 2, 11, 7};
+        int targ = 11;
+        List<List<Integer>> result = findComb(numbers, targ);
+        for (List<Integer> combination : result) {
+            System.out.println(combination);
+        }}}

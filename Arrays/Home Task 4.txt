@@ -1,0 +1,22 @@
+package dsalab4q4;
+
+public class DSALab4Q4 {
+    public static int missNum(int[] nos) {
+        int n = nos.length;
+        int expectedSum = n * (n + 1) / 2;
+        int actualSum = 0;
+
+        for (int no : nos) {
+            actualSum += no;
+        }
+
+        return expectedSum - actualSum;
+    }
+
+    public static void main(String[] args) {
+        int[] num = {0, 1, 2, 3, 4, 5, 7};
+        int missing = missNum(num);
+
+        System.out.println("Numero faltante: " + missing);
+    }
+}
